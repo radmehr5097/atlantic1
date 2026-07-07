@@ -1,0 +1,6 @@
+{
+  "name": "آتلانتیک (ATLANTIC)",
+  "description": "تلفیق دانش روز، علوم باستانی و تعالیم اسلامی - وبسایت رسمی و درمانی برند آتلانتیک",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

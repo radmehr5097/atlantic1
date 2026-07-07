@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-lapis-deep: #0B1B3D;
+  --color-turquoise: #1E4D7B;
+  --color-gold-ancient: #C9A227;
+  --color-ivory-aged: #F5F0E1;
+  --color-text-dark: #1A1A2E;
+  --color-text-muted: #6B7280;
+  --font-sans: "Vazirmatn", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Amiri", Georgia, Cambria, serif;
+}
+
+/* Custom styles for luxury Persian theme */
+body {
+  font-family: var(--font-sans);
+  direction: rtl;
+  background-color: #0B1B3D;
+  color: #FFFFFF;
+  overflow-x: hidden;
+}
+
+/* Simulated Nastaliq title effect */
+.nastaliq-title {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, #FFF 20%, #C9A227 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 4px 10px rgba(11, 27, 61, 0.5);
+}
+
+.gold-glow {
+  text-shadow: 0 0 12px rgba(201, 162, 39, 0.4);
+}
+
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #E2B632 0%, #A47F15 100%);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #FFF 10%, #E2B632 50%, #A47F15 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Turquoise inlay pattern simulation (Firoozeh Koobi background) */
+.turquoise-inlay-bg {
+  background-image: radial-gradient(#1E4D7B 1.5px, transparent 1.5px), radial-gradient(#1E4D7B 1.5px, #0B1B3D 1.5px);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+  opacity: 0.12;
+}
+
+/* Eslimi-inspired border styles */
+.eslimi-border {
+  position: relative;
+}
+
+.eslimi-border::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 10' preserveAspectRatio='none'%3E%3Cpath d='M0 5 C 20 0, 30 10, 50 5 C 70 0, 80 10, 100 5 L 100 10 L 0 10 Z' fill='%23C9A227' opacity='0.3'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(11, 27, 61, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(201, 162, 39, 0.15);
+}
+
+.glass-panel-light {
+  background: rgba(245, 240, 225, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(11, 27, 61, 0.1);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B1B3D;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1E4D7B;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C9A227;
+}
+
+/* Light Theme Adaptations */
+.theme-light {
+  background-color: #FAF8F5 !important;
+  color: #1A1A2E !important;
+}
+
+/* Override turquoise inlay opacity */
+.theme-light .turquoise-inlay-bg {
+  opacity: 0.05;
+}
+
+/* Glass panel overrides */
+.theme-light .glass-panel {
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(201, 162, 39, 0.3) !important;
+  box-shadow: 0 10px 30px -10px rgba(11, 27, 61, 0.1) !important;
+}
+
+/* Glass panel light override */
+.theme-light .glass-panel-light {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 1px solid rgba(201, 162, 39, 0.2) !important;
+}
+
+/* Text overrides in Light Theme */
+.theme-light h1.text-white,
+.theme-light h2.text-white,
+.theme-light h3.text-white,
+.theme-light h4.text-white,
+.theme-light h5.text-white,
+.theme-light span.text-white,
+.theme-light .text-white,
+.theme-light blockquote.text-white {
+  color: #1A1A2E !important;
+}
+
+.theme-light .text-gray-100,
+.theme-light .text-gray-200,
+.theme-light blockquote.text-gray-200 {
+  color: #1E293B !important;
+}
+
+.theme-light .text-gray-300 {
+  color: #334155 !important;
+}
+
+.theme-light .text-gray-400 {
+  color: #4B5563 !important;
+}
+
+/* Header element styling */
+.theme-light header {
+  background-color: rgba(250, 248, 245, 0.75) !important;
+  border-bottom-color: rgba(201, 162, 39, 0.25) !important;
+  box-shadow: 0 4px 20px -5px rgba(11, 27, 61, 0.05) !important;
+}
+
+.theme-light header .text-white,
+.theme-light header h1 .text-white {
+  color: #1A1A2E !important;
+}
+
+.theme-light header .text-gray-300 {
+  color: #4B5563 !important;
+}
+
+.theme-light header .text-gray-300:hover {
+  color: #1A1A2E !important;
+}
+
+.theme-light header .bg-white\/5 {
+  background-color: rgba(11, 27, 61, 0.05) !important;
+  border-color: rgba(11, 27, 61, 0.08) !important;
+  color: #4B5563 !important;
+}
+
+.theme-light header .bg-white\/5:hover {
+  background-color: rgba(201, 162, 39, 0.15) !important;
+  color: #C9A227 !important;
+}
+
+/* Background overlays */
+.theme-light .bg-white\/5,
+.theme-light .bg-white\/10 {
+  background-color: rgba(11, 27, 61, 0.04) !important;
+  border-color: rgba(11, 27, 61, 0.06) !important;
+}
+
+.theme-light .bg-lapis-deep\/50,
+.theme-light .bg-lapis-deep\/60,
+.theme-light .bg-lapis-deep\/80 {
+  background-color: rgba(255, 255, 255, 0.75) !important;
+  border-color: rgba(11, 27, 61, 0.08) !important;
+}
+
+.theme-light .bg-black\/20,
+.theme-light .bg-black\/25,
+.theme-light .bg-black\/30,
+.theme-light .bg-black\/40 {
+  background-color: rgba(11, 27, 61, 0.03) !important;
+}
+
+.theme-light .border-white\/5,
+.theme-light .border-white\/10,
+.theme-light .border-gold-ancient\/10,
+.theme-light .border-gold-ancient\/15 {
+  border-color: rgba(201, 162, 39, 0.25) !important;
+}
+
+/* Hero Section override */
+.theme-light .nastaliq-title {
+  background: linear-gradient(135deg, #1A1A2E 20%, #C9A227 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.theme-light blockquote {
+  color: #334155 !important;
+}
+
+/* Form controls */
+.theme-light input,
+.theme-light select,
+.theme-light textarea {
+  background-color: #FFFFFF !important;
+  color: #1A1A2E !important;
+  border-color: rgba(201, 162, 39, 0.3) !important;
+}
+
+.theme-light input::placeholder,
+.theme-light textarea::placeholder {
+  color: #9CA3AF !important;
+}
+
+/* Footer Section */
+.theme-light footer {
+  background-color: #F4EFE2 !important;
+  border-top-color: rgba(201, 162, 39, 0.3) !important;
+}
+
+.theme-light footer h2,
+.theme-light footer h4,
+.theme-light footer h5 {
+  color: #1A1A2E !important;
+}
+
+.theme-light footer .text-gray-300 {
+  color: #334155 !important;
+}
+
+.theme-light footer .text-gray-400 {
+  color: #4B5563 !important;
+}
+
+/* Modal specific theme adaptation */
+.theme-light #product-detail-modal-container {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(201, 162, 39, 0.4) !important;
+  color: #1A1A2E !important;
+}
+
+.theme-light #product-detail-modal-container .text-white {
+  color: #1A1A2E !important;
+}
+
+.theme-light #product-detail-modal-container .bg-slate-900\/40,
+.theme-light #product-detail-modal-container .bg-amber-950\/20,
+.theme-light #product-detail-modal-container .bg-emerald-950\/20 {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  border-color: rgba(201, 162, 39, 0.25) !important;
+}
+
+.theme-light #product-detail-modal-container .text-gray-300 {
+  color: #334155 !important;
+}
+
+/* Scrollbars in Light theme */
+.theme-light::-webkit-scrollbar-track,
+.theme-light ::-webkit-scrollbar-track {
+  background: #FAF8F5;
+}
+
+.theme-light::-webkit-scrollbar-thumb,
+.theme-light ::-webkit-scrollbar-thumb {
+  background: #C9A227;
+}
+
+
