@@ -1,9 +1,13 @@
 import { Product, Perfume, Pack, ConsultationService, Testimonial } from './types';
 
+import heroImage from './assets/images/atlantic_hero_banner_1783435249508.jpg';
+import elixirProductImage from './assets/images/atlantic_elixir_product_1783435263611.jpg';
+import perfumeBottleImage from './assets/images/atlantic_perfume_bottle_1783435277005.jpg';
+
 // Let's define the paths to the generated high-quality images
-export const HERO_IMAGE = '/src/assets/images/atlantic_hero_banner_1783435249508.jpg';
-export const ELIXIR_PRODUCT_IMAGE = '/src/assets/images/atlantic_elixir_product_1783435263611.jpg';
-export const PERFUME_BOTTLE_IMAGE = '/src/assets/images/atlantic_perfume_bottle_1783435277005.jpg';
+export const HERO_IMAGE = heroImage;
+export const ELIXIR_PRODUCT_IMAGE = elixirProductImage;
+export const PERFUME_BOTTLE_IMAGE = perfumeBottleImage;
 
 export const productsData: Product[] = [
   {

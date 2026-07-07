@@ -41,6 +41,7 @@ import {
 // Custom Components
 import Header from './components/Header';
 import FloatingContact from './components/FloatingContact';
+import AIAssistant from './components/AIAssistant';
 import GoldParticles from './components/GoldParticles';
 import ProductCard from './components/ProductCard';
 import ProductDetailModal from './components/ProductDetailModal';
@@ -171,6 +172,7 @@ export default function App() {
 
       {/* Floating Action Button */}
       <FloatingContact />
+      <AIAssistant />
 
       {/* Temporary Notification Banner */}
       <AnimatePresence>
